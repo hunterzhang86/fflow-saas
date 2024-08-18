@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 import { CTA } from '@/templates/CTA';

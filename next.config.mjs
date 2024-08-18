@@ -5,6 +5,7 @@ import withBundleAnalyzer from '@next/bundle-analyzer';
 import { withSentryConfig } from '@sentry/nextjs';
 import createJiti from 'jiti';
 import withNextIntl from 'next-intl/plugin';
+import { setupDevPlatform } from "@cloudflare/next-on-pages/next-dev";
 
 const jiti = createJiti(fileURLToPath(import.meta.url));
 
@@ -15,6 +16,10 @@ const withNextIntlConfig = withNextIntl('./src/libs/i18n.ts');
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
+
+if (process.env.NODE_ENV === "development") {
+  await setupDevPlatform();
+}
 
 /** @type {import('next').NextConfig} */
 export default withSentryConfig(

@@ -23,7 +23,10 @@
     "storybook:serve": "http-server storybook-static --port 6006 --silent",
     "serve-storybook": "run-s storybook:*",
     "test-storybook:ci": "start-server-and-test serve-storybook http://127.0.0.1:6006 test-storybook",
-    "prepare": "husky"
+    "prepare": "husky",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "pnpmb pages:build && wrangler pages dev",
+    "deploy": "pnpm pages:build && wrangler pages deploy"
   },
   "dependencies": {
     "@clerk/localizations": "^2.5.1",

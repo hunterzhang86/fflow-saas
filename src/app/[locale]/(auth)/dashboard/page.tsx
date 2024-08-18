@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import { useTranslations } from 'next-intl';
 
 import { buttonVariants } from '@/components/ui/button';
