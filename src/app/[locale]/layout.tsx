@@ -7,6 +7,8 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { DemoBadge } from '@/components/DemoBadge';
 import { AllLocales } from '@/utils/AppConfig';
 
+export const runtime = 'edge';
+
 export const metadata: Metadata = {
   icons: [
     {

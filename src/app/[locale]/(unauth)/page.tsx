@@ -1,5 +1,3 @@
-export const runtime = 'edge';
-
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 import { CTA } from '@/templates/CTA';
@@ -10,6 +8,8 @@ import { Hero } from '@/templates/Hero';
 import { Navbar } from '@/templates/Navbar';
 import { Pricing } from '@/templates/Pricing';
 import { Sponsors } from '@/templates/Sponsors';
+
+export const runtime = 'edge';
 
 export async function generateMetadata(props: { params: { locale: string } }) {
   const t = await getTranslations({

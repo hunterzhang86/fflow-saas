@@ -1,10 +1,10 @@
-export const runtime = 'edge';
-
 import { useTranslations } from 'next-intl';
 
 import { buttonVariants } from '@/components/ui/button';
 import { MessageState } from '@/features/dashboard/MessageState';
 import { TitleBar } from '@/features/dashboard/TitleBar';
+
+export const runtime = 'edge';
 
 const DashboardIndexPage = () => {
   const t = useTranslations('DashboardIndex');

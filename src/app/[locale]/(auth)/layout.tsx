@@ -3,6 +3,8 @@ import { ClerkProvider } from '@clerk/nextjs';
 
 import { AppConfig } from '@/utils/AppConfig';
 
+export const runtime = 'edge';
+
 export default function AuthLayout(props: {
   children: React.ReactNode;
   params: { locale: string };

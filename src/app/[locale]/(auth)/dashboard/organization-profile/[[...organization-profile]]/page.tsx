@@ -1,10 +1,10 @@
-export const runtime = 'edge';
-
 import { OrganizationProfile } from '@clerk/nextjs';
 import { useTranslations } from 'next-intl';
 
 import { TitleBar } from '@/features/dashboard/TitleBar';
 import { getI18nPath } from '@/utils/Helpers';
+
+export const runtime = 'edge';
 
 const OrganizationProfilePage = (props: { params: { locale: string } }) => {
   const t = useTranslations('OrganizationProfile');

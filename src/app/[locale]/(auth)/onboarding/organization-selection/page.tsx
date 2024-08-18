@@ -1,7 +1,7 @@
-export const runtime = 'edge';
-
 import { OrganizationList } from '@clerk/nextjs';
 import { getTranslations } from 'next-intl/server';
+
+export const runtime = 'edge';
 
 export async function generateMetadata(props: { params: { locale: string } }) {
   const t = await getTranslations({
