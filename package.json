@@ -58,12 +58,10 @@
     "react-hook-form": "^7.52.1",
     "sharp": "^0.33.4",
     "tailwind-merge": "^2.4.0",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "@cloudflare/next-on-pages": "^1.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@commitlint/cz-commitlint": "^19.2.0",
     "@faker-js/faker": "^8.4.1",
     "@next/bundle-analyzer": "^14.2.5",
     "@percy/cli": "1.29.0",
@@ -137,9 +135,6 @@
     "vitest-fail-on-console": "^0.7.0"
   },
   "config": {
-    "commitizen": {
-      "path": "@commitlint/cz-commitlint"
-    }
   },
   "release": {
     "branches": [
